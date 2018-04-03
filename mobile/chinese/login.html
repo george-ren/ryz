@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC 
+    "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" 
+    "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport" / >
+
+
+<head>
+<title>兴业投资 - 欢迎访问兴业投资 </title>
+<script src="../js/sellan.js" language="javascript"></script>
+<script src="../js/jquery.js" language="javascript"></script>
+<script src="../js/jquery.menu.js" language="javascript"></script>
+<link rel="stylesheet" type="text/css" href="../css/all.css" />
+<link rel="stylesheet" type="text/css" href="../css/cn.css" />
+</head>
+<body>
+<!--#include file="top.html"-->
+<!--#include file="topmenu.html"-->
+<div class="toptitle  oneline">
+<h4><cite>欢迎访问兴业投资 </cite></h4>
+</div>
+
+<div class="contact reg">
+<form action="/chinese/inlogin/domobilelogin.hyml" method="post" onsubmit="vali();return false;">
+<input type="hidden" name="account"/><!--账户类型 隐藏  -->
+<input type="hidden" name="regtype"/>	<!-- 是否是shortform --> 
+<input type="hidden" name="ebook"/>	<!-- 是否是ebook -->  
+<input type="hidden" name="requestURL"/>	
+<input type="hidden" name="mobileflag"  value="mobilelogin"/><!-- 是否是mobile -->
+<div class="regbox">
+<p><label>用户名:</label><input name="username" class="txt"  type="text" onBlur="loadaccount('chinese');" id="username_login" /></p>
+<p><label>密码:</label><input name="password" type="password" class="txt" size="32" /></p>
+<p><label>账户类型 :</label>
+  <select name="select" id="acctypeselect">
+          <option value="XXXX" >选择您的账户类型</option>
+    </select>
+    </p>
+
+<p><label> 验证码 :</label>
+<input type="text" class="txtb" id="verify" name="imgageCode"  /><img src="/servlet/imageCode"  class="code" />
+<span style="display:none" id="loadspan"><img src="/loadingmbl.gif"/></span>
+<p></p>
+<small><a href="/mobile/chinese/password_a.html">忘记密码？</a></small></p>
+<p><span id="spanAu" style="display:none;color:red">这个用户不存在</span></p>
+<p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="twobut">
+  <tr>
+    <td class="redbut" width="30%"><span id="login"><a href="#" onclick="login();">登录</a></span></td>
+    <td class="bord">&nbsp;</td>
+    <td class="bluebut" width="70%"><a href="liveac.html" >马上注册</a></td>
+  </tr>
+</table>
+</p>
+ <p>
+ <div id="returnerror" style="color:red"></div>
+ </p>
+<p class="dotted"></p>
+<p>注意：<br />本网站的使用是受兴业投资<a href="/pdf/customer_agreement_cn.pdf" target="_blank">客户协议</a>和<a href="/pdf/Terms_of_Business_cn.pdf" target="_blank">商业条款</a>制约，这些协议和条款更新，不会另行通知。继续登录，将表明您同意遵守这些条款。 </p>		
+</div>
+ </form>
+ <script type="text/javascript">
+   		$(document).ready(function (){
+   			loadaccount();
+		});
+</script>
+</div>
+<script src="/js/mobile/mobile_login_cn.js" language="javascript"></script>
+<!--#include file="foot.html"-->
+</body></html>
+
+
+

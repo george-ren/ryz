@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script language="JavaScript" type="text/JavaScript">
+function writeCookie(name,value,day)
+{
+expire="";
+expire=new Date();
+expire.setTime(expire.getTime()+day*24*3600*1000);
+expire=expire.toGMTString();
+document.cookie=name+"="+escape(value)+";expires="+expire;
+}
+
+function writeCookie(name,value)
+{
+expire="";
+expire=new Date();
+expire.setTime(expire.getTime()+3600*1000);
+expire=expire.toGMTString();
+document.cookie=name+"="+escape(value)+";expires="+expire;
+}
+
+function readCookie(name)
+{
+cookieValue="";
+search1=name+"=";
+if(document.cookie.length>0)
+{
+offset=document.cookie.indexOf(search1) ;
+if(offset!=-1)
+{
+       offset+=search1.length;
+end=document.cookie.indexOf(";",offset);
+if(end==-1)
+    end= document.cookie.length;
+cookieValue=unescape(document.cookie.substring(offset,end));
+}
+}
+return cookieValue;
+}    
+
+writeCookie("mobile","y");
+//alert("mobile is:"+readCookie("mobile"));
+
+
+function getQueryString(name) {
+var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+var r = window.location.search.substr(1).match(reg);
+if (r != null) return unescape(r[2]); return null;
+}
+
+//alert("gotourl is:"+getQueryString("gotourl"));
+var gotourl="/"+getQueryString("gotourl");
+//alert("gotourl is:"+gotourl);
+window.location=gotourl;
+</script>
+</head>
+<body>
+</body>
+</html>
