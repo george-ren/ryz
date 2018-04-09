@@ -2,4 +2,8 @@ ryz
 dff
 test
 dfd
+<<<<<<< HEAD
 ryz1
+=======
+ryz
+>>>>>>> testing
